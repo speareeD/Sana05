@@ -15,5 +15,19 @@
             Price = price;
         }
 
+        public virtual string DisplayInfo()
+        {
+            return $"{Year} {Brand} {Model} - ${Price}";
+        }
+
+        public virtual double CalculateTax()
+        {
+            return Price * 0.01;
+        }
+
+        public virtual int GetMaxSpeed()
+        {
+            return 100;
+        }
     }
 }
