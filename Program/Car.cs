@@ -14,7 +14,8 @@
 
         public override string DisplayInfo()
         {
-            return $"{base.DisplayInfo()}, Doors: {NumberOfDoors}, Fuel: {FuelType}";
+            return $"Car: {base.DisplayInfo()}\nNumber of doors: {NumberOfDoors}\nFuel type: {FuelType}\n" +
+                $"Max speed: {GetMaxSpeed()} km/h\nVehicle tax: ${CalculateTax()}\n";
         }
 
         public override double CalculateTax()

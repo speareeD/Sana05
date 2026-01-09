@@ -14,7 +14,8 @@
 
         public override string DisplayInfo()
         {
-            return $"{base.DisplayInfo()}. With load capacity of {LoadCapacity} tons and {NumberOfAxles} number of axles";
+            return $"Truck: {base.DisplayInfo()}\nLoad capacity: {LoadCapacity} tons\nNumer of axles: {NumberOfAxles}\n" +
+                $"Max speed: {GetMaxSpeed()} km/h\nVehicle tax: ${CalculateTax()}\n";
         }
 
         public override double CalculateTax()

@@ -14,7 +14,8 @@
 
         public override string DisplayInfo()
         {
-            return $"{base.DisplayInfo()}, Engine volume: {EngineVolume} cm3, Has windshield: {HasWindshield}";
+            return $"Motorcycle: {base.DisplayInfo()}\nEngine volume: {EngineVolume} cm3\nHas windshield: {HasWindshield}\n" +
+                $"Max speed: {GetMaxSpeed()} km/h\nVehicle tax: ${CalculateTax()}\n";
         }
 
         public override double CalculateTax()

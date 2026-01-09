@@ -17,7 +17,7 @@
 
         public virtual string DisplayInfo()
         {
-            return $"{Year} {Brand} {Model} - ${Price}";
+            return $"{Year} {Brand} {Model}\nPrice: ${Price}";
         }
 
         public virtual double CalculateTax()
