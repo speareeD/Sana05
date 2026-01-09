@@ -25,9 +25,9 @@
             return Price * 0.01;
         }
 
-        public virtual int GetMaxSpeed()
+        public virtual string GetMaxSpeed()
         {
-            return 100;
+            return "100 km/h";
         }
     }
 }
