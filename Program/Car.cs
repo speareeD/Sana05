@@ -12,6 +12,23 @@
             FuelType = fuelType;
         }
 
+        public override string DisplayInfo()
+        {
+            return $"{base.DisplayInfo()}, Doors: {NumberOfDoors}, Fuel: {FuelType}";
+        }
 
+        public override double CalculateTax()
+        {
+            if (FuelType.ToLower() == "electro")
+            {
+                return Price * 0.0005;
+            }
+            return Price * 0.015;
+        }
+
+        public override string GetMaxSpeed()
+        {
+            return "180 km/h";
+        }
     }
 }
