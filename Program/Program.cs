@@ -1,7 +1,4 @@
-﻿using System.ComponentModel.DataAnnotations;
-using System.Net.Http.Headers;
-
-namespace Program
+﻿namespace Program
 {
     public class Program
     {
