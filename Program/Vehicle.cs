@@ -29,5 +29,9 @@
         {
             return 100;
         }
+        public virtual string GetShortName()
+        {
+            return $"{Brand} {Model}";
+        }
     }
 }
