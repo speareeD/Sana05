@@ -26,9 +26,9 @@
             return Price * 0.015;
         }
 
-        public override string GetMaxSpeed()
+        public override int GetMaxSpeed()
         {
-            return "180 km/h";
+            return 180;
         }
     }
 }
