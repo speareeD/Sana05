@@ -12,6 +12,19 @@
             NumberOfAxles = numberOfAxles;
         }
 
+        public override string DisplayInfo()
+        {
+            return $"{base.DisplayInfo()}. With load capacity of {LoadCapacity} tons and {NumberOfAxles} number of axles";
+        }
 
+        public override double CalculateTax()
+        {
+            return Price * 0.02 + LoadCapacity * 1000;
+        }
+
+        public override int GetMaxSpeed()
+        {
+            return 120;
+        }
     }
 }
