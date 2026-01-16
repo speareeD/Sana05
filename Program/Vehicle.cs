@@ -19,7 +19,14 @@
             {
                 Year = year;
             }
-            Price = price;
+            if (price < 0)
+            {
+                throw new Exception("Price cannot be less than 0");
+            }
+            else
+            {
+                Price = price;
+            }
         }
 
         public virtual string DisplayInfo()
