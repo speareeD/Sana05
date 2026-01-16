@@ -8,7 +8,14 @@
         public Truck(string brand, string model, int year, double price, double loadCapacity, int numberOfAxles)
             : base(brand, model, year, price)
         {
-            LoadCapacity = loadCapacity;
+            if (loadCapacity < 0)
+            {
+                throw new Exception("Load capacity cannot be less than 0");
+            }
+            else
+            {
+                LoadCapacity = loadCapacity;
+            }
             NumberOfAxles = numberOfAxles;
         }
 
