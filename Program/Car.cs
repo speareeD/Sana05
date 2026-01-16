@@ -1,4 +1,6 @@
-﻿namespace Program
+﻿using System.Net.Http.Headers;
+
+namespace Program
 {
     public class Car : Vehicle
     {
@@ -8,7 +10,14 @@
         public Car(string brand, string model, int year, double price, int numberOfDoors, string fuelType)
             : base(brand, model, year, price)
         {
-            NumberOfDoors = numberOfDoors;
+            if (numberOfDoors < 2)
+            {
+                throw new Exception("The number of doors cannot be less than 2");
+            }
+            else
+            {
+                NumberOfDoors = numberOfDoors;
+            }
             FuelType = fuelType;
         }
 
