@@ -11,7 +11,14 @@
         {
             Brand = brand;
             Model = model;
-            Year = year;
+            if (year < 1886)
+            {
+                throw new Exception("Year cannot be less than 1886");
+            }
+            else
+            {
+                Year = year;
+            }
             Price = price;
         }
 
