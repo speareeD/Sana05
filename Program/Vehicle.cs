@@ -11,22 +11,13 @@
         {
             Brand = brand;
             Model = model;
-            if (year < 1886)
-            {
-                throw new Exception("Year cannot be less than 1886");
-            }
-            else
-            {
-                Year = year;
-            }
+            if (year < 1886 || year > 2026)
+                throw new Exception("Invalid year");
             if (price < 0)
-            {
                 throw new Exception("Price cannot be less than 0");
-            }
-            else
-            {
-                Price = price;
-            }
+
+            Year = year;
+            Price = price;
         }
 
         public virtual string DisplayInfo()
