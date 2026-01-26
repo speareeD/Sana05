@@ -11,13 +11,11 @@ namespace Program
             : base(brand, model, year, price)
         {
             if (numberOfDoors < 2)
-            {
                 throw new Exception("The number of doors cannot be less than 2");
-            }
-            else
-            {
-                NumberOfDoors = numberOfDoors;
-            }
+            if (fuelType.ToLower() != "electro" && fuelType.ToLower() != "gasoline" && fuelType.ToLower() != "diesel")
+                throw new Exception("Fuel type can only be electro, gasoline or diesel");
+
+            NumberOfDoors = numberOfDoors;
             FuelType = fuelType;
         }
 
@@ -30,10 +28,9 @@ namespace Program
         public override double CalculateTax()
         {
             if (FuelType.ToLower() == "electro")
-            {
                 return Price * 0.0005;
-            }
-            return Price * 0.015;
+            else
+                return Price * 0.015;
         }
 
         public override int GetMaxSpeed()
